@@ -75,3 +75,21 @@ void Sort(char** A, int size, int M)
             }
         }
 }
+
+int Unique(char** S, int s)
+{
+    for (int i = 0; i < s; i++) {
+        for (int j = i + 1; j < s; j++) {
+            if (strcmp(S[i], S[j]) == 0 && S[j] != NULL) {
+                for (int shift = j; shift < s - 1; shift++) {
+                    strcpy(S[shift], S[shift + 1]);
+                }
+                s--;
+                if (strcmp(S[i], S[j]) == 0 && S[j] != NULL) {
+                    j--;
+                }
+            }
+        }
+    }
+    return s;
+}
