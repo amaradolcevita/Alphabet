@@ -5,3 +5,5 @@
 #include <string.h>
 
 void WordCount(long* max, long* count, char* filename);
+
+void WordsArray(char** slovaDyn, char* filename, long count, long max);
