@@ -33,5 +33,6 @@ int main()
         slovaDyn[i] = (char*)malloc(max * sizeof(char));
     }
     WordsArray(slovaDyn, name_1, count, max);
+    Sort(slovaDyn, count, max);
 return 0;
 }
