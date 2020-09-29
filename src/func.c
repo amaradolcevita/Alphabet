@@ -9,7 +9,7 @@
 void WordCount(long * max, long * count, char* filename)
 {
     char symbol, pred = '.';
-    long dlin = 1;
+    long len = 1;
     long counts = 0;
     FILE* op = fopen(filename, "r");
     symbol = getc(op);
@@ -18,11 +18,11 @@ void WordCount(long * max, long * count, char* filename)
             || (symbol > 191 && symbol < 256)) {
             if ((pred > 64 && pred < 91) || (pred > 96 && pred < 123)
                 || (pred > 191 && pred < 256)) {
-                dlin++;
+                len++;
             } else {
-                if (dlin > *max)
-                    *max = dlin;
-                dlin = 1;
+                if (len > *max)
+                    *max = len;
+                len = 1;
                 counts++;
             }
         }
