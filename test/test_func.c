@@ -9,8 +9,8 @@
 CTEST(arithmetic_suite, Sort)  
 {
     int i;
-    char* arr;
-    arr = (char*)malloc(5 * sizeof(char*));
+    char** arr;
+    arr = (char**)malloc(5 * sizeof(char*));
     for (i = 0; i < 5; i++) {
         arr[i] = (char*)malloc(10 * sizeof(char));
     }
@@ -23,8 +23,8 @@ CTEST(arithmetic_suite, Sort)
 
     Sort(arr, 5, 10);
 
-    char* arrTeor;
-    arrTeor = (char*)malloc(5 * sizeof(char*));
+    char** arrTeor;
+    arrTeor = (char**)malloc(5 * sizeof(char*));
     for (i = 0; i < 5; i++) {
         arrTeor[i] = (char*)malloc(10 * sizeof(char));
     }
@@ -48,7 +48,7 @@ CTEST(arithmetic_suite, WordCount)
     strcpy(name, "../test/test.txt");
     long max = 0, count = 0;
     WordCount(&max, &count, name);
-    const long countTeor = 5, maxTeor = 4;
+    const long countTeor = 4, maxTeor = 5;
     ASSERT_EQUAL(maxTeor, max);
     ASSERT_EQUAL(countTeor, count);
 }
