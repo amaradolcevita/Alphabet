@@ -11,14 +11,14 @@ int main()
 	int i, j;
     long count = 0, max = 0;
     FILE *op, *sort;
-    char name_1[1000], name_2[1000], zapros[1002], symbol, pred = '.';
+    char name_1[1000], name_2[1000], request[1002], symbol, pred = '.';
     char** slovaDyn;
     printf("Enter the file name: ");
-    scanf("%s", zapros);
+    scanf("%s", request);
     strcpy(name_1, "../texts/");
     strcpy(name_2, "../Sort/");
-    strcat(name_1, zapros);
-    strcat(name_2, zapros);
+    strcat(name_1, request);
+    strcat(name_2, request);
     sort = fopen(name_2, "w");
     op = fopen(name_1, "r");
     if (op == NULL) {
