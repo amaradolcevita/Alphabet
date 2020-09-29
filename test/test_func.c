@@ -54,11 +54,10 @@ CTEST(arithmetic_suite, WordCount)
 }
 CTEST(arithmetic_suite, Unique)
 {
-    const long s = 3
-	const long sTeor = 2;
+    long s = 3, sTeor = 2;
     int i;
-    char* arr;
-    arr = (char*)malloc(5 * sizeof(char*));
+    char** arr;
+    arr = (char**)malloc(5 * sizeof(char*));
     for (i = 0; i < 5; i++) {
         arr[i] = (char*)malloc(10 * sizeof(char));
     }
@@ -66,8 +65,8 @@ CTEST(arithmetic_suite, Unique)
     strcpy(arr[1], "our");
     strcpy(arr[2], "storm");
 
-    char* arrTeor;
-    arrTeor = (char*)malloc(5 * sizeof(char*));
+    char** arrTeor;
+    arrTeor = (char**)malloc(5 * sizeof(char*));
     for (i = 0; i < 5; i++) {
         arrTeor[i] = (char*)malloc(10 * sizeof(char));
     }
