@@ -26,11 +26,12 @@ int main()
         system("PAUSE");
         return 0;
     }
-    WordCount(&max, &count, name1);
+    WordCount(&max, &count, name_1);
     char** slovaDyn;
     slovaDyn = (char**)malloc(count * sizeof(char*));
     for (i = 0; i < count; i++) {
         slovaDyn[i] = (char*)malloc(max * sizeof(char));
     }
+    WordsArray(slovaDyn, name_1, count, max);
 return 0;
 }
