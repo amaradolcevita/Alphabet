@@ -25,6 +25,12 @@ int main()
         printf("Wrong File!");
         system("PAUSE");
         return 0;
-    }	
+    }
+    WordCount(&max, &count, name1);
+    char** slovaDyn;
+    slovaDyn = (char**)malloc(count * sizeof(char*));
+    for (i = 0; i < count; i++) {
+        slovaDyn[i] = (char*)malloc(max * sizeof(char));
+    }
 return 0;
 }
