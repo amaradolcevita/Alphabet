@@ -34,5 +34,6 @@ int main()
     }
     WordsArray(slovaDyn, name_1, count, max);
     Sort(slovaDyn, count, max);
+    count = Unique(slovaDyn, count);
 return 0;
 }
