@@ -52,5 +52,31 @@ CTEST(arithmetic_suite, WordCount)
     ASSERT_EQUAL(maxTeor, max);
     ASSERT_EQUAL(countTeor, count);
 }
+CTEST(arithmetic_suite, Unique)
+{
+    const long s = 3
+	const long sTeor = 2;
+    int i;
+    char* arr;
+    arr = (char*)malloc(5 * sizeof(char*));
+    for (i = 0; i < 5; i++) {
+        arr[i] = (char*)malloc(10 * sizeof(char));
+    }
+    strcpy(arr[0], "our");
+    strcpy(arr[1], "our");
+    strcpy(arr[2], "storm");
 
+    char* arrTeor;
+    arrTeor = (char*)malloc(5 * sizeof(char*));
+    for (i = 0; i < 5; i++) {
+        arrTeor[i] = (char*)malloc(10 * sizeof(char));
+    }
+
+    strcpy(arrTeor[0], "our");
+    strcpy(arrTeor[1], "storm");
+    s = Unique(arr, s);
+    ASSERT_EQUAL(sTeor, s);
+    ASSERT_STR(arrTeor[0], arr[0]);
+    ASSERT_STR(arrTeor[1], arr[1]);
+}
 
