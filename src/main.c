@@ -35,5 +35,14 @@ int main()
     WordsArray(slovaDyn, name_1, count, max);
     Sort(slovaDyn, count, max);
     count = Unique(slovaDyn, count);
+    for (int i = 0; i < count; i++) {
+        fputs(slovaDyn[i], sort);
+        putc('\n', sort);
+    }
+    fclose(op);
+    fclose(sort);
+    printf("Complete!\n");
+    system("PAUSE");
+    return EXIT_SUCCESS;
 return 0;
 }
