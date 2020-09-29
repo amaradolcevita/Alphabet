@@ -42,3 +42,17 @@ CTEST(arithmetic_suite, Sort)
     ASSERT_STR(arrTeor[4], arr[4]);
 }
 
+CTEST(arithmetic_suite, WordCount)
+{
+    char name[1000];
+    strcpy(name, "../test/test.txt");
+    long max = 0;
+	long count = 0;
+    WordCount(&max, &count, name);
+    const long countTeor = 5;
+    const long maxTeor = 4;
+    ASSERT_EQUAL(maxTeor, max);
+    ASSERT_EQUAL(countTeor, count);
+}
+
+
