@@ -1,4 +1,4 @@
-#include "func.h"
+#include "func.c"
 #include <locale.h>
 #include <math.h>
 #include <stdio.h>
@@ -27,7 +27,6 @@ int main()
         return 0;
     }
     WordCount(&max, &count, name_1);
-    char** slovaDyn;
     slovaDyn = (char**)malloc(count * sizeof(char*));
     for (i = 0; i < count; i++) {
         slovaDyn[i] = (char*)malloc(max * sizeof(char));
