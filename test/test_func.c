@@ -78,4 +78,29 @@ CTEST(arithmetic_suite, Unique)
     ASSERT_STR(arrTeor[0], arr[0]);
     ASSERT_STR(arrTeor[1], arr[1]);
 }
-
+CTEST(arithmetic_suite, WordsArray)
+{
+    int i;
+    char name[1000];
+    strcpy(name, "../test/test.txt");
+    long count = 4, max = 5;
+    char** slovaDyn;
+    slovaDyn = (char**)malloc(count * sizeof(char*));
+    for (i = 0; i < 4; i++) {
+        slovaDyn[i] = (char*)malloc(max * sizeof(char));
+    }
+    char** arr;
+    arr = (char**)malloc(count * sizeof(char*));
+    for (i = 0; i < 4; i++) {
+        arr[i] = (char*)malloc(max * sizeof(char));
+    }
+    strcpy(arr[0], "crash");
+    strcpy(arr[1], "our");
+    strcpy(arr[2], "lands");
+    strcpy(arr[3], "storm");
+    WordsArray(slovaDyn, name, count, max);
+    ASSERT_STR(arr[0], slovaDyn[0]);
+    ASSERT_STR(arr[1], slovaDyn[1]);
+    ASSERT_STR(arr[2], slovaDyn[2]);
+    ASSERT_STR(arr[3], slovaDyn[3]);
+}
