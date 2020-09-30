@@ -1,3 +1,5 @@
+#include "../src/func.h"
+#include <locale.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
