@@ -1,3 +1,4 @@
+#include "func.h"
 #include "func.c"
 #include <locale.h>
 #include <math.h>
