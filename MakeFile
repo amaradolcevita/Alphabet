@@ -20,5 +20,6 @@ test: ./bin/test
 ./build/src/func.o: ./src/func.c
 	gcc -c -o ./build/src/func.o ./src/func.c 
 
+
 clean:
 	rm -rf ./bin/* ./build/src/*o ./build/test/*o
