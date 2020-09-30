@@ -1,0 +1,5 @@
+bin/*exe
+build/src/*o
+build/test/*o
+texts/*txt
+Sort/*txt
