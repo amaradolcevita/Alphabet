@@ -50,7 +50,7 @@ CTEST(arithmetic_suite, WordCount)
 	strcpy(name, "../test/test.txt");
 	long max = 0, count = 0;
 	WordCount(&max, &count, name);
-	const long countTeor = 4, maxTeor = 5;
+	const long countTeor = 5, maxTeor = 5;
 	ASSERT_EQUAL(maxTeor, max);
 	ASSERT_EQUAL(countTeor, count);
 }
