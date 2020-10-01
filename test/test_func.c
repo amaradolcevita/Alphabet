@@ -85,7 +85,7 @@ CTEST(arithmetic_suite, WordsArray)
 	int i;
 	char name[1000];
 	strcpy(name, "../test/test.txt");
-	long count = 4, max = 5;
+	long count = 5, max = 5;
 	char** slovaDyn;
 	slovaDyn = (char**)malloc(count * sizeof(char*));
 	for (i = 0; i < 4; i++) {
@@ -100,9 +100,11 @@ CTEST(arithmetic_suite, WordsArray)
 	strcpy(arr[1], "our");
 	strcpy(arr[2], "lands");
 	strcpy(arr[3], "storm");
+	strcpy(arr[4], "our");
 	WordsArray(slovaDyn, name, count, max);
 	ASSERT_STR(arr[0], slovaDyn[0]);
 	ASSERT_STR(arr[1], slovaDyn[1]);
 	ASSERT_STR(arr[2], slovaDyn[2]);
 	ASSERT_STR(arr[3], slovaDyn[3]);
+	ASSERT_STR(arr[4], slovaDyn[4]);
 }
